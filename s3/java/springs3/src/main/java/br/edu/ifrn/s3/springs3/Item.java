@@ -21,8 +21,10 @@ public class Item {
     }
 
     public String getUrl(){
-        return this.url;
+        return Utils.getPresignedUrl("aws-lab-tsi", "assets/0"+this.id+".jpg");
     }
+
+    
 
 
 

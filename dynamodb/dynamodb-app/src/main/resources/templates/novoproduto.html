@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Cadastro de Produtos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title is-2">Cadastro de Produtos</h1>
+        <hr>
+
+        <form action="#" th:action="@{/produto/salvarproduto}" th:object="${produto}" method="POST">
+            <div class="field">
+                <label class="label">Descrição</label>
+                <div class="control">
+                  <input class="input is-info" th:field="*{descricao}" type="text" placeholder="Descrição do Produto">
+                </div>
+              </div>
+              <label class="label">Valor</label>
+                <div class="control">
+                  <input class="input is-info" th:field="*{valor}" type="text" placeholder="Valor">
+                </div>
+              </div>
+
+           
+              <div class="control">
+                <button type="submit" class="button is-primary">Salvar produto</button>
+              </div>
+            
+        </form>
+
+        <hr>
+
+        <a class="button is-link" th:href="@{/produto}"> Voltar a lista de Produtos</a>
+    </div>
+</body>
+
+</html>

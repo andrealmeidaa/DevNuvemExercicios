@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Gestão de Produtos</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+</head>
+
+<body>
+
+    <div class="box">
+        <h1 class="title">Lista de Produtos</h1>
+
+        <a  class="button is-primary"> Adicionar Produto </a>
+
+        <table class="table is-bordered is-striped">
+            <thead>
+                <tr>
+                    <th>Descrição</th>
+                    <th>Valor</th>
+                    <th> Actions </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for produto in produtos %}
+                <tr >
+                    <td >{{produto.descricao}}</td>
+                    <td >{{produto.valor}}</td>
+                    <td> <a href="" class="button is-primary">Atualizar</a>
+                        
+                    </td>
+                </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

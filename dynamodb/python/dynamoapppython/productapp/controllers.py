@@ -13,4 +13,6 @@ class Products:
         except ClientError as erro:
             print(erro)
         return products
+    def insert_product(self,descricao,valor):
+        pass
         
